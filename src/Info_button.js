@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei'
 
 export function InfoButton(props) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('./info_button.gltf')
+  const { nodes, materials } = useGLTF('/models/info_button.gltf')
 
   const [hovered, setHover] = useState(false)
   return (

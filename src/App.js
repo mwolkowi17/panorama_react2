@@ -1,8 +1,8 @@
 
 import './App.css';
-import React, { useState, Suspense, useEffect } from 'react'
+import React, { useState, Suspense } from 'react'
 import { Canvas, } from '@react-three/fiber'
-import { OrbitControls, Html, useProgress, Loader } from '@react-three/drei';
+import { OrbitControls, Loader } from '@react-three/drei';
 import { Panorama2 } from './Panorama2';
 import { PanoramaStart } from './PanoramaStart';
 import { Panorama3 } from './Panorama3';
@@ -15,13 +15,6 @@ import { useLoader } from '@react-three/fiber'
 
 function App() {
 
-  // function Loader() {
-  //   //const { progress } = useProgress()
-  //   //return <Html center >{progress} % loaded</Html>
-  //   console.log('loader')
-  //   return <Html center style={{ color: 'black' }}>loading...</Html>
-  // }
-
   const [ifPanaroma2, SetPanoram2] = useState(false);
   const [ifPanorama3, SetPanorama3] = useState(false);
   const [ifPanoramaStart, SetPanoramaStart] = useState(true);
@@ -32,11 +25,9 @@ function App() {
     setIsDisplay(false)
   }
 
-  const texture1 = useLoader(TextureLoader, './index.png')
-  const texture2 = useLoader(TextureLoader, './kawiarnia3.png')
-  const texture3 = useLoader(TextureLoader, './kawiarnia4.png')
-
-
+  const texture1 = useLoader(TextureLoader, '/models/index.png')
+  const texture2 = useLoader(TextureLoader, '/models/kawiarnia3.png')
+  const texture3 = useLoader(TextureLoader, '/models/kawiarnia4.png')
 
   return (
     <>

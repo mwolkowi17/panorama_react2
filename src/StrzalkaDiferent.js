@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei'
 
 export function StrzalkaDiferent(props) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('./strzalka2.gltf')
+  const { nodes, materials } = useGLTF('/models/strzalka2.gltf')
 
   const [hovered, setHover] = useState(false)
   return (
